@@ -1,2 +1,2 @@
 echo "Script output"
-echo ${{ inputs.inputString }}
+echo "Parameters: $@"

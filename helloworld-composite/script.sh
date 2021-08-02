@@ -1,2 +1,2 @@
 echo "Script output"
-echo ${INPUT_STR}
+echo ${{ inputs.inputString }}

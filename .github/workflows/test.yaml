@@ -10,5 +10,9 @@ jobs:
     name: Example run
     steps:
       - uses: pavolloffay/github-actions/helloworld-composite/@main
+        if: foo
         with:
           inputString: John Doe
+      - run: echo random-number ${{ steps.foo.outputs.random-number }}
+        shell: bash
+

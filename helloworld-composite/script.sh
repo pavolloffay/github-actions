@@ -1,1 +1,1 @@
-echo ${INPUT_INPUTSTRING}
+echo "Script output"

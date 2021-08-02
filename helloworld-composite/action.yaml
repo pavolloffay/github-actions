@@ -14,8 +14,6 @@ runs:
   steps:
     - run: echo ${{ inputs.inputString }}
       shell: bash
-    - run: echo "second step"
-      shell: bash
     - run: ${{ github.action_path }}/script.sh ${{ inputs.inputString }}
       shell: bash
     - id: random-number-generator

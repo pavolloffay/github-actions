@@ -16,7 +16,7 @@ runs:
       shell: bash
     - run: echo "second step"
       shell: bash
-    - run: ${GITHUB_ACTION_PATH}/script.sh
+    - run: script.sh
       shell: bash
     - id: random-number-generator
       run: echo "::set-output name=random-id::$(echo $RANDOM)"

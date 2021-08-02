@@ -17,5 +17,5 @@ runs:
     - run: ${{ github.action_path }}/script.sh
       shell: bash
     - id: random-number-generator
-      run: export RANDOM_NUMBER=11
+      run: echo "::set-output name=random-id::$(echo $RANDOM)"
       shell: bash

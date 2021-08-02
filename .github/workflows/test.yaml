@@ -13,6 +13,7 @@ jobs:
         id: foo
         with:
           inputString: John Doe
-      - run: echo random-number ${{ steps.foo.outputs.RANDOM_NUMBER }}
+#      - run: echo random-number ${{ steps.foo.outputs.RANDOM_NUMBER }}
+      - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
 

@@ -1,0 +1,12 @@
+name: Test composite action
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  example-run:
+    runs-on: ubuntu-latest
+    name: Example run
+    steps:
+      - uses: pavolloffay/github-actions/helloworld-composite/@main

@@ -10,3 +10,5 @@ jobs:
     name: Example run
     steps:
       - uses: pavolloffay/github-actions/helloworld-composite/@main
+        with:
+          inputString: John Doe

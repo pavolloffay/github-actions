@@ -1,0 +1,13 @@
+name: 'Example command action'
+description: 'Example greet action'
+inputs:
+  inputString:
+    description: 'Some input string'
+    required: true
+    default: 'Default string'
+runs:
+  using: 'composite'
+  steps:
+    - name: Echo
+      shell: bash
+      run: echo ${{ inputs.inputString }}

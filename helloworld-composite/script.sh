@@ -1,2 +1,1 @@
-echo "Script output"
-echo "Parameters: $@"
+echo "Script output: $@"

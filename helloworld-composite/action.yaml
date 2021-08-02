@@ -3,11 +3,18 @@ description: 'Example greet action'
 inputs:
   inputString:
     description: 'Some input string'
-    required: true
+    required: false
     default: 'Default string'
+outputs:
+  random-number:
+    description: "Random number"
+    value: ${{ steps.random-number-generator.outputs.random-id }}
 runs:
   using: 'composite'
   steps:
-    - name: Echo
+    - run: echo ${{ inputs.inputString }}
       shell: bash
-      run: echo ${{ inputs.inputString }}
+    - run: ${{ github.action_path }}/script.sh
+      shell: bash
+    - id: random-number-generator
+      run: echo "::set-output name=random-id::$(echo $RANDOM)"

@@ -11,6 +11,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
+        # The container is always build per action run even when tagged version is used
         uses: pavolloffay/github-actions/helloworld-docker@v1
         with:
           who-to-greet: 'Mona the Octocat'

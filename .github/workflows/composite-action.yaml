@@ -15,5 +15,5 @@ jobs:
           inputString: John Doe
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
-      - run: ls -al
+      - run: ls file.json
 
